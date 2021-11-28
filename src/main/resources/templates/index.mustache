@@ -10,9 +10,18 @@
 
 <h1>스프링 부트로 제작한 웹서비스 게시판 </h1>
 <div class="col-md-12">
+    <!-- 로그인 기능 영역 -->
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            {{#LoginName}}
+                반가워요. <span id="user">{{LoginName}}</span>님.
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/LoginName}}
+            {{^LoginName}}
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+            {{/LoginName}}
         </div>
     </div>
     <br>
