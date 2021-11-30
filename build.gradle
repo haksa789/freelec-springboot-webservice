@@ -39,6 +39,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     runtimeOnly('org.springframework.boot:spring-boot-devtools')
     compile('org.springframework.session:spring-session-jdbc')
+    compile("org.mariadb.jdbc:mariadb-java-client")
 }
 
 test {
