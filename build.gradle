@@ -4,7 +4,8 @@ plugins { // (1)
     id 'java'
 }
 
-group 'com.jojoldu.book'
+
+group 'com.pongdong.book'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 sourceCompatibility = 1.8
 
@@ -21,7 +22,7 @@ test { // (2)
 dependencies {
     //(3)
     implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('org.springframework.boot:spring-boot-starter-mustache:2.5.6')
 
     // lombok
     implementation('org.projectlombok:lombok')
